@@ -1,0 +1,53 @@
+:root {
+  --sidebar-width: auto;
+  --navbar-height: 50px;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboardLayout {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  grid-template-rows: 55px auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "sidebar navbar"
+    "sidebar content";
+}
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #f5f5f5;
+  grid-area: navbar;
+}
+.sidebar {
+  background-color: #151b26;
+  grid-area: sidebar;
+  overflow: auto;
+  width: 239px;
+  transition: all 1s !important;
+}
+.dashboardContent {
+  background-color: white;
+  grid-area: content;
+}
+
+@media (max-width: 800px) {
+  .dashboardLayout {
+    display: grid;
+    height: 100vh;
+    padding: 0;
+    grid-template-rows: 55px auto;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "sidebar navbar"
+      "sidebar content";
+  }
+}

@@ -1,0 +1,83 @@
+
+.companies {
+  width: 75%;
+  margin: auto;
+  padding-top: 45px;
+
+  
+  .recent {
+    font-family: 'Roboto','sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 50px;
+  }
+
+  .companiesList {
+    display: grid;
+    margin-left: 45px;
+    padding-top: 12px;
+    border-top: 1px solid #d2cdcd;
+    grid-template-columns: 50px 1fr 30px;
+    grid-template-rows: 22px 25px;
+    grid-template-areas:
+      "busLogo busName more"
+      "busLogo createdDate .";
+    cursor: pointer;
+  }
+  .dot{
+    font-size: 30px;
+    color: #a9a9a9;
+  }
+  .moreDot {
+    position: relative;
+    right: 15px;  
+    grid-area: more;
+  }
+
+  .dot:hover {
+    color: rgb(17, 17, 17);
+  }
+  
+  .list:hover {
+    background:rgba(213, 220, 224, 0.5);
+    border-radius: 4px;
+  }
+  .companyLogo {
+    grid-area: busLogo;
+    border-radius: 10%;
+    height: 40px;
+    width: 40px;
+  }
+  .companyName {
+    grid-area: busName;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px !important;
+    line-height: 16px;
+    font-size: 16px;
+    position: relative;
+    top: -3px;
+  }
+  .createdDate {
+    grid-area: createdDate;
+    font-family: 'Roboto','sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    color: #9CA6AF
+  }
+  @media (max-width: 800px) {
+    .company {
+      width: 100%;
+      padding: 0;
+    }
+    .dashboardContent {
+      padding-top: 5px !important;
+    }
+  }
+  
+}

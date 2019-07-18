@@ -1,0 +1,104 @@
+
+.schoolDetails{
+    height:auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35px 1fr;
+    grid-template-areas: 
+    "date"
+    "infoContainer";
+}
+.schoolDetails {    
+  .dateField {
+    grid-area: date;
+    border: 1px solid #E0E6E8;    
+    box-shadow:0px 2px 6px 0px #797878;
+    background:white;
+    padding-top: 10px;
+    padding-left: 19px;
+  }
+  .dateField .createdDate {   
+    font-family: 'Roboto','sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    align-items: center;
+    color: #848f99;
+  }
+  .schoolContainer {
+    grid-area: infoContainer;
+    padding-top: 15px;   
+  }
+  .schoolInfo{
+    border: 1px solid #d5dce0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width:80%;
+    margin:auto;
+    background: white;
+    height:auto;
+    position: relative;
+  }
+  .profileHead {
+    height: 50px;
+    border-bottom: 1px solid #C1C1C1;
+    position: relative;
+  }
+  .profileHead p{
+    font-family: 'Roboto','sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    position: absolute;
+    top: 11px;
+    left: 35px;
+  }
+  .profileHead i{
+    font-size: 18px;
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    cursor: pointer
+  }
+  .profileHead i:hover{
+      color: #615f5e;
+  }
+
+  .profileInfo{
+      height: auto;
+      display: grid;
+      padding: 15px;
+      grid-template-rows:auto;
+      grid-template-columns:auto auto;
+      grid-template-areas:
+      "partOne partTwo"       
+       
+  }
+  .profileInfo .title{
+    font-family: 'Roboto','sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .profileInfo .data{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .partOne{
+    grid-area: partOne;
+    padding: 10px 0 10px 22px;
+
+  }
+  .partTwo{
+      grid-area: partTwo;
+      padding: 10px 0 10px 155px;
+
+  }
+
+  .schoolStatics {
+    // border-bottom: 1px #848f99 solid;
+  }
+}

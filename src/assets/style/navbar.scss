@@ -1,0 +1,179 @@
+
+.navbar {
+  padding: 10px;
+  font-family: sans-serif;
+  display: grid !important;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 93px 40px;
+  grid-template-areas: "routeTitle new profile";
+}
+.routeTitle {
+  font-family: Arial;
+  font-size: 22px;
+  line-height: 23px;
+  grid-area: routeTitle;
+  margin-top: -3px;
+}
+.routeTitle p {
+  position: absolute;
+  top: 24px;
+}
+@media (max-width: 800px) {
+  .routeTitle p {
+    position: absolute;
+    top: 19px;
+    left: 70px;
+  }
+  .routeTitle .sidebarToggler {
+    display: inherit !important;
+  }
+}
+.routeTitle .sidebarToggler {
+  position: absolute;
+  top: 24px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.routeTitle .sidebarToggler:hover {
+  color: grey;
+}
+.routeTitle .sidebarToggler .fa-caret-right {
+  font-size: 20px;
+  position: absolute;
+  top: 2px;
+  left: 24px;
+}
+.profile .profileItem{
+  color: white;    
+  border: none;    
+  font-family: sans-serif;
+  cursor: pointer;
+  
+}
+.profile .profileItem #dropdown-left__BV_toggle_{
+  background: #4F3767;;
+  border: none;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+}
+.profile{
+  grid-area: profile;
+}
+
+
+.new {
+  grid-area: new;
+}
+.new .newBtn {
+  color: white;
+  border: none;  
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.new .newBtn #dropdown-right__BV_toggle_{
+  width: 70px;
+  height: 35px;
+  background: #3897F0;
+  border-radius: 4px;
+}
+.new .newBtn #dropdown-right__BV_toggle_ span{
+  position: absolute;
+  top: 9px;
+  right: 14px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.new .newBtn #dropdown-right__BV_toggle_ i{
+  font-size: 10px;
+  position: absolute;
+  top: 12px;
+  left: 15px;
+}
+.schoolProfileNav{
+  display: grid;
+  grid-template-areas: "logo skulTitle""logo ul";
+  grid-template-columns: 40px 150px;
+  grid-template-rows: 30px 30px
+}
+.schoolProfileNav p{
+  position: absolute;
+  font-family: Arial;
+  font-size: 15px;
+  top: 4px;
+  left: 17px;
+  font-weight: bold;
+}
+.schoolProfileNav i{
+  position: absolute;
+  top:4px;
+  right:5px;
+}
+.schoolProfileNav .logo{
+  grid-area: logo;
+  width: 40px;
+  height: 40px;
+  background: #4F3767;
+  border-radius: 3px;
+  margin-top: 10px; 
+}
+.schoolProfileNav .schoolTitle{
+ grid-area: skulTitle;
+ position: relative;
+}
+.schoolProfileNav .Options ul{
+  grid-area: ul;
+  list-style: none;
+  position: absolute;
+  left: 15px;
+}
+.schoolProfileNav .Options ul li{
+  font-family: 'Roboto','sans-serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  color: #a3a6a9;
+  display: inline;
+  margin-left: 18px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.schoolProfileNav .Options ul li:hover{
+  color: #454647;
+}
+.schoolProfileNav .Options ul li:active{
+
+  border-bottom: 2px solid #008CE3;
+}
+
+
+
+@media(max-width:400px){
+  .navbar {
+    padding: 10px;
+    font-family: sans-serif;
+    display: grid !important;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 81px 40px;
+    grid-template-areas: "routeTitle new profile";
+  }
+  .new .newBtn #dropdown-right__BV_toggle_{
+    width: 60px;
+    height: 30px;
+}
+.new .newBtn #dropdown-right__BV_toggle_ i{
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  font-size: 14px;
+}
+.new .newBtn #dropdown-right__BV_toggle_ span{
+  position: absolute;
+  top: 3px;
+  right: 7px;
+  font-size: 15px;
+}
+}

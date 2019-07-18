@@ -1,0 +1,74 @@
+.dashboardContent {
+  padding-top: 45px;
+}
+.recent {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 50px;
+}
+
+.school {
+  width: 70%;
+  margin: auto;
+}
+.schoolsList {
+  display: grid;
+  margin-left: 45px;
+  padding-top: 12px;
+  border-top: 1px solid #d2cdcd;
+  grid-template-columns: 50px 1fr 30px;
+  grid-template-rows: 22px 25px;
+  grid-template-areas:
+    "schoolLogo schoolName seeMore"
+    "schoolLogo createdDate .";
+  cursor: pointer;
+}
+
+
+.dot:hover {
+  color: rgb(17, 17, 17);
+}
+.dot{
+  font-size: 30px;
+  color: #a9a9a9;
+}
+.moreDot {
+  position: relative;
+  right: 15px;  
+  grid-area: seeMore;
+}
+.seeMore #dropdown-left__BV_toggle_{
+  background: none;
+  border: none;
+}
+.seeMore #dropdown-left__BV_toggle_:focus{
+  box-shadow:none;
+}
+
+
+.list:hover {
+  background: #bfb9b970;
+  border-radius: 4px;
+}
+.schoolLogo {
+  grid-area: schoolLogo;
+  border-radius: 10%;
+  height: 40px;
+  width: 40px;
+}
+.schoolName {
+  grid-area: schoolName;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+  top: -3px;
+}
+.createdDate {
+  grid-area: createdDate;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #afafaf;
+}

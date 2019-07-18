@@ -1,0 +1,207 @@
+@media (max-width: 800px) {
+  .sidebar {
+    margin-left: -239px;
+  }
+}
+@media (max-width: 400px) {
+}
+.sidebar {
+  color: white;
+  position: relative;
+}
+.sidebar .sidebarToggler {
+  position: absolute;
+  top: 16px;
+  left: 205px;
+  font-size: 25px;
+  color: #ececec63;
+  cursor: pointer;
+}
+.sidebar .sidebarToggler .fa-caret-left {
+  font-size: 15px;
+  position: absolute;
+  top: 13px;
+  left: -8px;
+}
+.sidebar .sidebarToggler:hover {
+  color: #bdbdbd;
+}
+
+.sidebarHeader {
+  color: white;
+  padding: 23px 15px 0;
+  margin-bottom: 17px;
+}
+
+.sidebarHeader img {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -3px;
+}
+.sidebarHeader p {
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 23px;
+  display: inline;
+}
+.routeLink {
+  color: white;
+  background: #c7c7c745;
+  height: 35px;
+  padding: 0 0 0 20px;
+  margin-bottom: 70px;
+  cursor: pointer;
+}
+.routeLink:hover {
+  background: #9c979738;
+}
+.routeLink i {
+  display: inline;
+  font-size: 25px;
+  position: relative;
+  top: 3px;
+}
+.sidebarLink {
+  text-decoration: none;
+  color: white;
+}
+.sidebarLink:hover {
+  text-decoration: none;
+}
+.routeLink p {
+  display: inline;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.companyItems,
+.schoolItems {
+  border-top: 1px solid #5f6567;
+  padding: 0 20px 0 20px;
+  color: #646f79;
+}
+.companyItems .more,
+.schoolItems .more {
+  font-family: Arial;
+  font-size: 13px;
+  line-height: 15px;
+  cursor: pointer;
+  margin-top: 11px;
+}
+.ListTitle {
+  height: 36px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.mainTitle {
+  font-family: Arial;
+  font-size: 13px;
+  line-height: 15px;
+}
+.ListTitle:hover {
+  .mainTitle {
+    color:  #bdbdbd;
+  }
+
+  i {
+    color: #bdbdbd;
+  }
+}
+.companyItems .more:hover,
+.schoolItems .more:hover {
+  color: #bdbdbd;
+}
+.schoolItems .items {
+  padding-left: 9px;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 30px;
+  grid-template-columns: 10px 1fr;
+  grid-template-areas: "logo school";
+}
+
+.companyItems .items {
+  padding-left: 9px;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 30px;
+  grid-template-columns: 10px 1fr;
+  grid-template-areas: "logo company";
+}
+.companyItems .items:hover,
+.schoolItems .items:hover {
+  background: #c7c7c745;
+}
+
+.companyItems .items span {
+  grid-area: logo;
+  height: 8px;
+  width: 8px;
+  border-radius: 15%;
+  position: relative;
+  top: 10px;
+}
+.companyItems .items p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: white;
+  padding-left: 10px;
+  grid-area: company;
+  position: relative;
+  top: 6px;
+}
+.schoolItems .items span {
+  height: 8px;
+  width: 8px;
+  border-radius: 15%;
+  position: relative;
+  top: 10px;
+  grid-area: logo;
+}
+.schoolItems .items p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  padding-left: 10px;
+  grid-area: school;
+  position: relative;
+  top: 6px;
+}
+
+.companyItems .all,
+.schoolItems .all {
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  text-decoration: none;
+  color: #d5dce0;
+  cursor: pointer;
+}
+.companyItems .all:hover,
+.schoolItems .all:hover {
+  color: #bdbdbd;
+}
+.schoolItems i,
+.companyItems i {
+  position: absolute;
+  top: 7px;
+  left: 219px;
+  cursor: pointer;
+}
+
+.schoolItems,
+.companyItems {
+  position: relative;
+}
