@@ -85,7 +85,6 @@ export default {
   methods: {
     toggleSidebar() {
       this.$store.dispatch("rightSideToggler");
-      console.log(this.screenMonitor)
     }
   }
 };

@@ -9,26 +9,31 @@ const store = new Vuex.Store({
       mainContentHeight: "",
       hideToggler: "none",
       routeNameStyles: "",
-      sidebarStyle: "showSidebarNav"
+      sidebarStyle: "showSidebarNav",
+      layoutStyle:""
     }
   },
   mutations: {
     screenIsOver800(state) {
+      state.screenValues.layoutStyle="";
       state.screenValues.hideToggler = "none";
       state.screenValues.sidebarStyle = "showSidebar";
       state.screenValues.routeNameStyles = "";
     },
     screenIsLess800(state) {
+      state.screenValues.layoutStyle="";
       state.screenValues.routeNameStyles = "";
       state.hideToggler = "none";
     },
     rightOver800(state) {
+      state.screenValues.layoutStyle="overflow:hidden";
       state.screenValues.mainContentHeight = "height:50vh";
       state.screenValues.routeNameStyles = "";
       state.screenValues.sidebarStyle = "showSidebar";
       state.screenValues.hideToggler = "none";
     },
     rightLess800(state) {
+      state.screenValues.layoutStyle="overflow:hidden"
       state.screenValues.mainContentHeight = "height:50vh";
       state.screenValues.hideToggler = "none !important";
       state.screenValues.routeNameStyles =
@@ -36,6 +41,7 @@ const store = new Vuex.Store({
       state.screenValues.sidebarStyle = "showSidebarForce";
     },
     leftOver800(state) {
+      state.screenValues.layoutStyle=""
       state.screenValues.mainContentHeight = "";
       state.screenValues.hideToggler = "inherit";
       state.screenValues.routeNameStyles =
@@ -43,6 +49,7 @@ const store = new Vuex.Store({
       state.screenValues.sidebarStyle = "hideSidebar";
     },
     leftLess800(state) {
+      state.screenValues.layoutStyle=""
       state.screenValues.mainContentHeight = "";
       state.screenValues.hideToggler = "inherit";
       state.screenValues.routeNameStyles =

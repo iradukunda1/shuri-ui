@@ -39,65 +39,39 @@
     height:auto;
     position: relative;
   }
-  .profileHead {
-    height: 50px;
-    border-bottom: 1px solid #C1C1C1;
-    position: relative;
-  }
-  .profileHead p{
-    font-family: 'Roboto','sans-serif';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    position: absolute;
-    top: 11px;
-    left: 35px;
-  }
-  .profileHead i{
-    font-size: 18px;
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    cursor: pointer
-  }
-  .profileHead i:hover{
-      color: #615f5e;
-  }
+
 
   .profileInfo{
       height: auto;
       display: grid;
       padding: 15px;
       grid-template-rows:auto;
-      grid-template-columns:auto auto;
+      grid-template-columns:1fr 1fr;
       grid-template-areas:
       "partOne partTwo"       
        
   }
-  .profileInfo .title{
+  .title{
     font-family: 'Roboto','sans-serif';
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
   }
-  .profileInfo .data{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
+  .data{
+    font-weight: 500;
     font-size: 13px;
-    line-height: 15px;
-  }
-  .partOne{
-    grid-area: partOne;
-    padding: 10px 0 10px 22px;
-
-  }
-  .partTwo{
-      grid-area: partTwo;
-      padding: 10px 0 10px 155px;
-
+    margin-bottom: 15px;
   }
 
+  @media (max-width: 575px) {
+    .partOne{
+      padding-bottom: 0px;
+    }
+    .partTwo{
+      padding-top: 0px;
+    }
+
+  }
   .schoolStatics {
     // border-bottom: 1px #848f99 solid;
   }
