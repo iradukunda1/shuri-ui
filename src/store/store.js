@@ -6,11 +6,11 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     screenValues: {
-      mainContentHeight: "",
-      hideToggler: "none",
-      routeNameStyles: "",
-      sidebarStyle: "showSidebarNav",
-      layoutStyle:""
+      // mainContentHeight: "",
+      // hideToggler: "none",
+      // routeNameStyles: "",
+      // sidebarStyle: "showSidebarNav",
+      // layoutStyle:""
     }
   },
   mutations: {
