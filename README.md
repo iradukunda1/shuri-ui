@@ -1,4 +1,4 @@
-# beginner
+# shuri-ui
 
 ## Project setup
 ```

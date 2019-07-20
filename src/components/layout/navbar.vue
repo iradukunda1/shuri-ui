@@ -1,30 +1,24 @@
 <template>
-  <div class="navbar">
+  <div class="navbar" :style="screenMonitor.navbar">
     <div class="routeTitle">
-      <div
-        class="sidebarToggler"
-        :style="{display:screenMonitor.hideToggler}"
-        @click="toggleSidebar"
-      >
-        <i class="fa fa-bars"></i>
-        <i class="fa fa-caret-right"></i>
-      </div>
-      <p :style="screenMonitor.routeNameStyles" v-if="$route.path!=='/schoolProfile'">{{$route.name}}</p>
-      <div v-if="$route.path=='/schoolProfile'" class="schoolProfileNav">
-      <span class="logo"></span>
-      <div class="schoolTitle">
-        <p>Apapec-Irebero</p>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="Options">
-        <ul>
-          <li class="li1">Home</li>
-          <li class="li2">Students</li>
-          <li class="li3">Employees</li>
-        </ul>
+      <div class="leftTitleBar">
+        
+        <p v-if="$route.path!=='/schoolProfile'">{{$route.name}}</p>
       </div>
 
-      
+      <div v-if="$route.path=='/schoolProfile'" class="schoolProfileNav">
+        <span class="logo"></span>
+        <div class="schoolTitle">
+          <p>Apapec-Irebero</p>
+          <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="Options">
+          <ul>
+            <li class="li1">Home</li>
+            <li class="li2">Students</li>
+            <li class="li3">Employees</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="new">
@@ -55,7 +49,7 @@
       >
         <template slot="button-content">My</template>
         <b-dropdown-item>
-          <b>Sheja Eddy</b>
+          <b>shuri jean</b>
         </b-dropdown-item>
         <b-dropdown-divider></b-dropdown-divider>
         <b-dropdown-item>My Profile Setting</b-dropdown-item>
@@ -85,7 +79,6 @@ export default {
   methods: {
     toggleSidebar() {
       this.$store.dispatch("rightSideToggler");
-      console.log(this.screenMonitor);
     }
   }
 };
@@ -96,9 +89,6 @@ export default {
 }
 .showSidebarForce {
   margin-left: 0 !important;
-}
-#dropdown-right__BV_toggle_{
-  border:none;
 }
 </style>
 <style>

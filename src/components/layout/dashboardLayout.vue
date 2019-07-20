@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboardLayout">
+    <div class="dashboardLayout" :style="layout.layoutStyle">
       <navbar/>
       <sidebar/>
       <dashboardContent/>
@@ -16,6 +16,11 @@ export default {
     navbar,
     sidebar,
     dashboardContent
+  },
+  computed:{
+    layout(){
+      return this.$store.getters.screenVal
+    }
   },
   data() {
     return {
