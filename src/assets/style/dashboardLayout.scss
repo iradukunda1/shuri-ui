@@ -1,3 +1,4 @@
+
 :root {
   --sidebar-width: auto;
   --navbar-height: 55px;
@@ -39,17 +40,4 @@ body {
 .dashboardContent {
   background-color: white;
   grid-area: content;
-}
-
-@media (max-width: 800px) {
-  .dashboardLayout {
-    display: grid;
-    height: auto;
-    padding: 0;
-    grid-template-rows: 55px auto;
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "sidebar navbar"
-      "sidebar content";
-  }
 }

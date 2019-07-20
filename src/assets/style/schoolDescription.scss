@@ -62,17 +62,24 @@
     font-size: 13px;
     margin-bottom: 15px;
   }
+ 
 
   @media (max-width: 575px) {
-    .partOne{
-      padding-bottom: 0px;
-    }
+    ol, ul, dl .partOne{
+    
+      margin-top: 0;
+      margin-bottom: 0px;
+  } 
     .partTwo{
       padding-top: 0px;
     }
-
-  }
-  .schoolStatics {
-    // border-bottom: 1px #848f99 solid;
+       .data{
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      .title{
+        font-weight: bold;
+        font-size: 12px;
+    }
   }
 }

@@ -1,21 +1,20 @@
 <template>
-  <div :class="screenMonitor.sidebarStyle" class="sidebar">
-    <div class="sidebarHeader">
+  <div :style="screenMonitor.sidebar" class="sidebar">
+    <div class="sidebarHeader" :style="screenMonitor.sidebarHeader">
       <img :src="logo" alt="Logo" />&nbsp;
       <p>ShuriDash</p>
     </div>
-    <span class="sidebarToggler" @click="toggleSidebar()" ref="sidebarToggler">
+   <span class="sidebarToggler" @click="toggleSidebar()" :style="screenMonitor.sidebarToggler">
       <i class="fa fa-bars"></i>
-      <i class="fa fa-caret-left"></i>
-    </span>
+    </span> 
 
     <router-link to="/home" class="sidebarLink">
-      <div class="routeLink">
+      <div class="routeLink" :style="screenMonitor.routeLink" >
         <i class="fa fa-home"></i>&nbsp;
-        <p>Home</p>
+        <p :style="screenMonitor.routerName">Home</p>
       </div>
     </router-link>
-    <div class="schoolItems">
+    <div class="schoolItems" :style="screenMonitor.schoolItems">
       <div class="ListTitle" @click="showSchools=!showSchools,showAllSchools=false">
          <p class="mainTitle">Schools</p>
       <i v-show="!showSchools" class="fa fa-caret-up"></i>
@@ -27,20 +26,20 @@
      
       <div v-show="showSchools">
         <div class="schoolList">
-          <div class="items" v-for="(school,index) in schools" :key="index" @click="$router.push('/schoolProfile')">
+          <div class="items" v-for="(school,index) in schools" :key="index" @click="$router.push('/schoolProfile'),toggleSidebar()">
             <span :style="{background:school.logo}"></span>
             <p>{{school.name}}</p>
           </div>
         </div>
         <div v-show="showAllSchools">
-          <p class="all" @click="$router.push('/schools')">All Items</p>
+          <p class="all" @click="$router.push('/schools'),toggleSidebar()">All Items</p>
           <p class="more" @click="showAllSchools=false">Show Less</p>
         </div>
 
         <p v-show="!showAllSchools" class="more" @click="showAllSchools=true">Show More</p>
       </div>
     </div>
-    <div class="companyItems">
+    <div class="companyItems" :style="screenMonitor.companyItems">
       <div class="ListTitle" @click="showCompanies=!showCompanies">
         <p class="mainTitle">Bus Company</p>
         <i v-show="!showCompanies" class="fa fa-caret-up" @click="showCompanies=true"></i>
@@ -49,13 +48,13 @@
       
       <div v-show="showCompanies">
         <div class="companyList" v-show="showCompanies">
-          <div class="items" v-for="(company,index) in companies" :key="index">
+          <div class="items" v-for="(company,index) in companies" :key="index" @click="toggleSidebar()">
             <span :style="{background:company.logo}"></span>
             <p>{{company.name}}</p>
           </div>
         </div>
         <div v-show="showAllCompanies">
-          <p class="all" @click="$router.push('/companies')">All Items</p>
+          <p class="all" @click="$router.push('/companies'),toggleSidebar()">All Items</p>
           <p class="more" @click="showAllCompanies=false">Show Less</p>
         </div>
 
@@ -110,20 +109,17 @@ export default {
     };
   },
   computed: {
-    screenMonitor: {
-      get: function() {
-        return this.$store.getters.screenVal;
-      },
-      set: function() {}
+    screenMonitor() {
+      return this.$store.getters.screenVal;
     }
   },
   methods: {
-    toggleSidebar() {
-      this.$refs.sidebarToggler.style = "display:none";
-      setTimeout(() => {
-        this.$refs.sidebarToggler.style = "";
-      }, 1000);
-      this.$store.dispatch("leftSideToggler");      
+    toggleSidebar() { 
+    if(this.screenMonitor.sidebarToggler===""){    
+      this.$store.dispatch("SideToggler");  
+    }else{
+      this.$store.dispatch("initialToggler");
+    }    
     }
   }
 };

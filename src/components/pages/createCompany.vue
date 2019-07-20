@@ -1,9 +1,6 @@
 <template>
   <div class="newCompany">
     <div class="headerPart">
-      <span class="back">
-        <i class="fa fa-arrow-left" @click="$router.go(-1)"></i>
-      </span>
       <span class="cancel">
         <i class="fa fa-close" @click="$router.go(-1)"></i>
       </span>

@@ -6,80 +6,79 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     screenValues: {
-      // mainContentHeight: "",
-      // hideToggler: "none",
-      // routeNameStyles: "",
-      // sidebarStyle: "showSidebarNav",
-      // layoutStyle:""
+     
+      sidebarDisplay: "",
+      sidebar: "",
+      sidebarHeader: "",
+      routerName: "",
+      routeLink: "",
+      schoolItems: "",
+      companyItems: "",
+      sidebarToggler: "",
+      navbar: "",
+      dashboardContent: "",
     }
   },
+  
   mutations: {
-    screenIsOver800(state) {
-      state.screenValues.layoutStyle="";
-      state.screenValues.hideToggler = "none";
-      state.screenValues.sidebarStyle = "showSidebar";
-      state.screenValues.routeNameStyles = "";
+    screenMoved(state) {
+        state.screenValues.sidebarDisplay = "",
+        state.screenValues.sidebar = "transition:all 1s !important",
+        state.screenValues.sidebarHeader = "",
+        state.screenValues.routerName = "",
+        state.screenValues.routeLink = "",
+        state.screenValues.schoolItems = "",
+        state.screenValues.companyItems = "",
+        state.screenValues.sidebarToggler = "",
+        state.screenValues.navbar = "",
+        state.screenValues.dashboardContent = ""
     },
-    screenIsLess800(state) {
-      state.screenValues.layoutStyle="";
-      state.screenValues.routeNameStyles = "";
-      state.hideToggler = "none";
+    screenOver600(state) {
+
     },
-    rightOver800(state) {
-      state.screenValues.layoutStyle="overflow:hidden";
-      state.screenValues.mainContentHeight = "height:50vh";
-      state.screenValues.routeNameStyles = "";
-      state.screenValues.sidebarStyle = "showSidebar";
-      state.screenValues.hideToggler = "none";
+    initialToggler(state) {
+      state.screenValues.sidebarDisplay = "",
+        state.screenValues.sidebar = "transition:all 1s !important",
+        state.screenValues.sidebarHeader = "",
+        state.screenValues.routerName = "",
+        state.screenValues.routeLink = "",
+        state.screenValues.schoolItems = "",
+        state.screenValues.companyItems = "",
+        state.screenValues.sidebarToggler = "",
+        state.screenValues.navbar = "",
+        state.screenValues.dashboardContent = ""
     },
-    rightLess800(state) {
-      state.screenValues.layoutStyle="overflow:hidden"
-      state.screenValues.mainContentHeight = "height:50vh";
-      state.screenValues.hideToggler = "none !important";
-      state.screenValues.routeNameStyles =
-        "position: absolute;top: 24px;left:16px;";
-      state.screenValues.sidebarStyle = "showSidebarForce";
-    },
-    leftOver800(state) {
-      state.screenValues.layoutStyle=""
-      state.screenValues.mainContentHeight = "";
-      state.screenValues.hideToggler = "inherit";
-      state.screenValues.routeNameStyles =
-        "position: absolute;top: 24px;left: 70px;";
-      state.screenValues.sidebarStyle = "hideSidebar";
-    },
-    leftLess800(state) {
-      state.screenValues.layoutStyle=""
-      state.screenValues.mainContentHeight = "";
-      state.screenValues.hideToggler = "inherit";
-      state.screenValues.routeNameStyles =
-        "position: absolute;top: 24px;left: 70px;";
-      state.screenValues.sidebarStyle = "hideSidebar";
+    screenLess600(state) {
+
+      state.screenValues.sidebarToggler = "display: initial;position:absolute;top:10px;right:20px; font-size: 25px;color: #ececec63;cursor: pointer;margin-bottom: 17px;"
+      state.screenValues.sidebar = "width:100vw;text-align:inherit;padding-top: 15px;height:auto;transition:none !important"
+      state.screenValues.sidebarHeader = "display: inherit;padding-top:5px"
+      state.screenValues.routerName = "display:inline;"
+      state.screenValues.routeLink = "margin-bottom: 70px;padding:0 0 0 20px"
+      state.screenValues.schoolItems = "display:inherit;"
+      state.screenValues.companyItems = "display: inherit;"
+      state.screenValues.navbar = "display:none !important;"
+      state.screenValues.dashboardContent = "display:none;"
     }
+
   },
   actions: {
     sidebarCycle({ commit }) {
       window.onresize = () => {
-        if (window.innerWidth > 800) {
-          commit("screenIsOver800");
-        } else {
-          commit("screenIsLess800");
+        if (window.innerWidth > 600) {
+          commit("screenMoved");
         }
       };
     },
-    rightSideToggler({ commit }) {
-      if (window.innerWidth > 800) {
-        commit("rightOver800");
+    SideToggler({ commit }) {
+      if (window.innerWidth > 600) {
+        commit("screenOver600");
       } else {
-        commit("rightLess800");
+        commit("screenLess600");
       }
     },
-    leftSideToggler({ commit }) {
-      if (window.innerWidth < 800) {
-        commit("leftLess800");
-      } else {
-        commit("leftOver800");
-      }
+    initialToggler({ commit }) {
+      commit("initialToggler");
     }
   },
   getters: {
