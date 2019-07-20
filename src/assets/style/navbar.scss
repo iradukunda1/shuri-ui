@@ -1,61 +1,39 @@
 
 .navbar {
-  padding: 10px;
+  width:100%;
+  padding:0 22px !important;
   font-family: sans-serif;
   display: grid !important;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 93px 40px;
+  grid-template-columns: 1fr auto auto;
   grid-template-areas: "routeTitle new profile";
 }
 .routeTitle {
   font-family: Arial;
-  font-size: 22px;
-  line-height: 23px;
   grid-area: routeTitle;
-  margin-top: -3px;
+  width: 100%; 
+  height:100%;
 }
 .routeTitle p {
-  position: absolute;
-  top: 24px;
-}
-@media (max-width: 800px) {
-  .routeTitle p {
-    position: absolute;
-    top: 19px;
-    left: 70px;
-  }
-  .routeTitle .sidebarToggler {
-    display: inherit !important;
-  }
-}
-.routeTitle .sidebarToggler {
-  position: absolute;
-  top: 24px;
-  font-size: 25px;
-  cursor: pointer;
-}
-.routeTitle .sidebarToggler:hover {
-  color: grey;
-}
-.routeTitle .sidebarToggler .fa-caret-right {
+  margin-top: 22px;
+  font-family: Arial;
   font-size: 20px;
-  position: absolute;
-  top: 2px;
-  left: 24px;
+  line-height: 23px; 
 }
+
+
 .profile .profileItem{
   color: white;    
   border: none;    
   font-family: sans-serif;
   cursor: pointer;
-  
 }
 .profile .profileItem #dropdown-left__BV_toggle_{
-  background: #4F3767;;
+  background: #4F3767;
   border: none;
   border-radius: 50%;
-  height: 35px;
-  width: 35px;
+  height: 34px;
+  width: 34px;
 }
 .profile{
   grid-area: profile;
@@ -64,6 +42,8 @@
 
 .new {
   grid-area: new;
+  width: 100%;
+  padding-right: 22px;
 }
 .new .newBtn {
   color: white;
@@ -88,205 +68,124 @@
 
 .new .newBtn #dropdown-right__BV_toggle_ i{
   font-size: 10px;
-  position: absolute;
-  top: 12px;
-  left: 15px;
+  float: left;
 }
 .schoolProfileNav{
+  height: 100%;
   display: grid;
-  width: 93.5%;
-  margin: auto;
   grid-template-areas: "logo skulTitle" "logo ul";
-  grid-template-columns: 40px 150px;
-  grid-template-rows: 30px 30px
+  grid-template-columns: 40px auto;
+  grid-template-rows: 35px 35px;
 }
 .schoolProfileNav p{
-  position: absolute;
   font-family: Arial;
-  font-size: 15px;
-  top: 4px;
-  left: 17px;
+  font-size: 15px;  
   font-weight: bold;
+  display: inline;
 }
-.schoolProfileNav i{
-  position: absolute;
-  top:4px;
-  right:5px;
-}
+
 .schoolProfileNav .logo{
   grid-area: logo;
-  width: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex
+}
+.schoolProfileNav .logo span{
   height: 40px;
-  left: 15px;
   background: #4F3767;
+  flex: 1;
   border-radius: 3px;
-  margin-top: 10px; 
+  margin: auto;
+
 }
 .schoolProfileNav .schoolTitle{
  grid-area: skulTitle;
- position: relative;
+ box-sizing: border-box;
+ padding:7px 16px 0;
+
 }
+.schoolProfileNav .schoolTitle i{
+  margin-left:15px
+}
+
 .schoolProfileNav .Options ul{
   grid-area: ul;
   list-style: none;
-  position: absolute;
-  left: 45px;
+  padding:5px 0 0 0;
+  margin: 0;
 }
+
 .schoolProfileNav .Options ul li{
   font-family: 'Roboto','sans-serif';
   font-style: normal;
-  font-weight: 500;
+  display: inline;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.schoolProfileNav .Options ul li a{
   font-size: 14px;
   line-height: 15px;
-  color: #a3a6a9;
-  display: inline;
-  margin-left: 18px;
-  cursor: pointer;
-  padding-bottom: 10px;
-}
-.schoolProfileNav .Options ul li:hover{
-  color: #454647;
-}
-.schoolProfileNav .Options ul li:active{
+  color: #a3a6a9; 
+  font-weight: 500;
+  padding-bottom: 8px;
 
+
+}
+
+
+.schoolProfileNav .Options ul li a:hover{
+  color: #454647;
+  text-decoration: none;
+}
+.schoolProfileNav .Options ul li .router-link-exact-active{
+  color: #008CE3;
   border-bottom: 2px solid #008CE3;
 }
-@media screen and (max-width:768px){
-  .schoolProfileNav{
-    width: 94.5%;
-    margin: auto;
-    grid-template-rows: 35px 25px;
-  
-    }
-    .navbar {
-      grid-template-rows: 1fr;
-      height: 70px;
-    }
-  .schoolProfileNav .Options ul{
-    list-style: none;
-    left: 15px;
-    font-size: 4px;
-    
-    }
-    
-    .schoolProfileNav .logo{
-      width: 80%;
-      height: 55%;
-      margin-top: 15px;
-    }
-    .new .newBtn #dropdown-right__BV_toggle_{
-      width: 47px;
-      height: 31px;
-      left: 13px;
-      top: 2px;
-    }
-  .new .newBtn #dropdown-right__BV_toggle_ i{
-    left: 3px;
-    top: 9px;
-    font-size: 12px;
+
+
+@media screen and (max-width:660px){
+  .navbar{
+    width:100%;
+    padding:0 !important
   }
   .new .newBtn #dropdown-right__BV_toggle_ span{
-    left: 15px;
-    top: 7px;
-    font-size: 12px;
-  }
-  .profile .profileItem #dropdown-left__BV_toggle_{
-    border-radius: 50%;
-    height: 33px;
-    width: 33px;
-    left: 5px;
-  }
-  .routeTitle .sidebarToggler {
-    left:4px;
-    font-size: 19px;
-    top: 25px;
-  }
-  .routeTitle .sidebarToggler .fa-caret-right{
-    left:20px;
-    font-size: 16px;
-  }
-  .schoolProfileNav .Options ul li {
-    font-size: 15.5px;
-    margin-left: 17px;
-  }
-  .schoolProfileNav p{
-    position: absolute;
-    font-size: 17px;
-    top:9px;
-    left: 1px;
-  }
-  .schoolProfileNav i {
-    position: absolute;
-    top: 9px;
-    right: 3px;
-    font-size: 22px;
-  }
-}
-@media screen and (max-width:475px){
-  .schoolProfileNav{
-  width: 85.5%;
-  margin: auto;
-  grid-template-rows: 30px 25px;
-
-  }
-  .navbar {
-    grid-template-rows: 1fr;
-    height: 75px;
-  }
-.schoolProfileNav .Options ul{
-  list-style: none;
-  left: 20px;
-  font-size: 12px;
- }  
-  .schoolProfileNav .logo{
-    width: 80%;
-    height: 55%;
-    margin-top: 15px;
+    display:none;
   }
   .new .newBtn #dropdown-right__BV_toggle_{
-    width: 27px;
-    height: 28px;
-    left: 60px;
+    width: 25px;
+    height: 25px ;
+    padding-left: 8px;   
   }
-.new .newBtn #dropdown-right__BV_toggle_ i{
-  left: 7px;
-  top: 7px;
-  font-size: 14px;
+  .schoolProfileNav .logo span{
+    height: 25px;    
+  }
+  .schoolProfileNav .logo{
+    padding-left: 5px; 
+   }
+   .schoolProfileNav .schoolTitle{   
+    padding:12px 3px 0;
+   
+   }
+   .schoolProfileNav .schoolTitle i {
+    margin-left: 13px;
 }
-.new .newBtn #dropdown-right__BV_toggle_ span{
-  display: none;
+    .schoolProfileNav p {
+      font-size: 13px;
+    }
+    .schoolProfileNav .Options ul li a {
+      font-size: 12px;  
+    }
+    .schoolProfileNav .Options ul li {
+      margin-left: 4px;
+    }
+    .schoolProfileNav {      
+      grid-template-columns: 30px auto;
+  }
+  .new {    
+    padding-right: 10px;
 }
-.profile .profileItem #dropdown-left__BV_toggle_{
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  top: 2px;
-  margin-left: 5px;
-}
-.routeTitle .sidebarToggler {
-  left:4px;
-  font-size: 19px;
-  top: 25px;
-}
-.routeTitle .sidebarToggler .fa-caret-right{
-  left:20px;
-  font-size: 16px;
-}
-.schoolProfileNav .Options ul li {
-  font-size: 11.5px;
-  margin-left: 13px;
-}
-.schoolProfileNav p{
-  position: absolute;
-  font-size: 12px;
-  top: 9px;
-  left: 1px;
-}
-.schoolProfileNav i {
-  position: absolute;
-  top: 11px;
-  right: 40px;
-  font-size: 19px;
+.profile{
+  padding-right:5px
 }
 }
 

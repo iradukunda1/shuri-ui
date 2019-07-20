@@ -8,7 +8,7 @@
       <i class="fa fa-bars"></i>
     </span> 
 
-    <router-link to="/home" class="sidebarLink">
+    <router-link to="/home" class="sidebarLink" @click="toggleSidebar()">
       <div class="routeLink" :style="screenMonitor.routeLink" >
         <i class="fa fa-home"></i>&nbsp;
         <p :style="screenMonitor.routerName">Home</p>

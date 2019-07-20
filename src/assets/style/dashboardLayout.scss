@@ -14,11 +14,9 @@ body {
 
 .dashboardLayout {
   display: grid;
-  height: auto;
-  overflow: hidden;
   width: 100vw;
   padding: 0;
-  grid-template-rows: 70px auto;
+  grid-template-rows: 70px calc(100vh - 70px);
   grid-template-columns: auto 1fr;
   grid-template-areas:
     "sidebar navbar"
@@ -30,7 +28,6 @@ body {
   grid-area: navbar;
 }
 .sidebar {
-  height: 100vh;
   background-color: #151b26;
   grid-area: sidebar;
   overflow: auto;

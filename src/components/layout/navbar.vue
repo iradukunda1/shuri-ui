@@ -1,22 +1,23 @@
 <template>
   <div class="navbar" :style="screenMonitor.navbar">
     <div class="routeTitle">
-      <div class="leftTitleBar">
         
         <p v-if="$route.path!=='/schoolProfile'">{{$route.name}}</p>
-      </div>
 
       <div v-if="$route.path=='/schoolProfile'" class="schoolProfileNav">
-        <span class="logo"></span>
+      <div  class="logo">
+        <span></span>
+      </div>
+        
         <div class="schoolTitle">
           <p>Apapec-Irebero</p>
           <i class="fa fa-caret-down"></i>
         </div>
         <div class="Options">
           <ul>
-            <li class="li1">Home</li>
-            <li class="li2">Students</li>
-            <li class="li3">Employees</li>
+            <li class="li1"><router-link to="/schoolProfile">Home</router-link></li>
+            <li class="li2"><router-link to="#">Students </router-link></li>
+            <li class="li3"><router-link to="#">Employees </router-link></li>
           </ul>
         </div>
       </div>
