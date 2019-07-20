@@ -1,7 +1,10 @@
 <template>
   <div class="schoolDetails">
     <div class="dateField">
-      <p class="createdDate">Created On Feb by : <b>Shuri Dev</b></p>
+      <p class="createdDate">
+        Created On Feb by :
+        <b>Shuri Dev</b>
+      </p>
     </div>
     <div class="schoolContainer">
       <div class="schoolInfo">
@@ -11,7 +14,7 @@
             <i class="fa fa-caret-down" v-show="showProfileInfo"></i>
             <i class="fa fa-caret-up" v-show="!showProfileInfo"></i>
           </span>
-          </b-button>
+        </b-button>
         <b-collapse visible id="collapse-1">
           <div class="profieInfo">
               <b-row>
@@ -46,7 +49,7 @@
           
         </div> 
         </b-collapse>
-       
+
         <div class="schoolStatics">
           <div class="profileHead">
             <b-button block v-b-toggle.collapse-2  @click="showStatsInfo=!showStatsInfo">
@@ -55,7 +58,7 @@
                 <i class="fa fa-caret-down" v-show="showStatsInfo"></i>
                 <i class="fa fa-caret-up" v-show="!showStatsInfo"></i>
               </span>
-          </b-button>       
+            </b-button>
           </div>
         </div>
       </div>
@@ -65,18 +68,15 @@
 <script>
 export default {
   name: "schoolProfile",
-  data(){
-    return{
-      showStatsInfo:true,
-      showProfileInfo:true
-    }
+  data() {
+    return {
+      showStatsInfo: true,
+      showProfileInfo: true
+    };
   }
 };
 </script>
-<style scoped>
 
-    
-</style>
 
 <style lang="scss" scoped>
 @import "../../assets/style/schoolDescription.scss";

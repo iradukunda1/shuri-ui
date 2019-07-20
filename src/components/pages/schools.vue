@@ -9,13 +9,13 @@
         <span :style="{background:recent.logo}" class="schoolLogo"></span>
         <p class="schoolName">{{recent.name}}</p>
         <span class="createdDate">Created: {{recent.createdDate}}</span>
-        <b-dropdown id="dropdown-left" class="seeMore" no-caret>
+        <b-dropdown id="dropdown-left" class="seeMore" no-caret  offset="-50">
           <template slot="button-content">
             <i class="fa fa-ellipsis-h dot"></i>
           </template>
-          <b-dropdown-item>Edit School</b-dropdown-item>
+          <b-dropdown-item><i class="fa fa-pencil"></i> School Details</b-dropdown-item>
           <b-dropdown-item>
-            <span style="color:red">Move To Trash</span>
+            <span style="color:red"><i class="fa fa-trash"></i> Move To Trash</span>
           </b-dropdown-item>
         </b-dropdown>
       </div>

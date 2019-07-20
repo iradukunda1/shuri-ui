@@ -1,24 +1,23 @@
-
-.schoolDetails{
-    height:auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 35px 1fr;
-    grid-template-areas: 
+.schoolDetails {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35px 1fr;
+  grid-template-areas:
     "date"
     "infoContainer";
 }
-.schoolDetails {    
+.schoolDetails {
   .dateField {
     grid-area: date;
-    border: 1px solid #E0E6E8;    
-    box-shadow:0px 2px 6px 0px #797878;
-    background:white;
+    border: 1px solid #e0e6e8;
+    box-shadow: 0px 2px 6px 0px #797878;
+    background: white;
     padding-top: 10px;
     padding-left: 19px;
   }
-  .dateField .createdDate {   
-    font-family: 'Roboto','sans-serif';
+  .dateField .createdDate {
+    font-family: "Roboto", "sans-serif";
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -27,96 +26,91 @@
   }
   .schoolContainer {
     grid-area: infoContainer;
-    padding-top: 15px;   
+    padding-top: 15px;
   }
-  .schoolInfo{
+  .schoolInfo {
     border: 1px solid #d5dce0;
     box-sizing: border-box;
     border-radius: 2px;
-    width:80%;
-    margin:auto;
+    width: 80%;
+    margin: auto;
     background: white;
-    height:auto;
+    height: auto;
     position: relative;
   }
 
-
-  .profileInfo{
-      height: auto;
-      display: grid;
-      padding: 15px;
-      grid-template-rows:auto;
-      grid-template-columns:1fr 1fr;
-      grid-template-areas:
-      "partOne partTwo"       
-       
+  .profileInfo {
+    height: auto;
+    display: grid;
+    padding: 15px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "partOne partTwo";
   }
-  .title{
-    font-family: 'Roboto','sans-serif';
+  .title {
+    font-family: sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 800;
+    font-size: 13px;
   }
-  .data{
+  .data {
     font-weight: 500;
     font-size: 13px;
     margin-bottom: 15px;
   }
- 
-  ul{
-    list-style:none;
+
+  ul {
+    list-style: none;
     padding: 15px 25px;
   }
   .btn-secondary {
-      color: rgb(5, 5, 5) !important;
-      background: none !important;
-      border: none !important;
-      border-bottom:1px solid #C1C1C1 !important;
-      text-align: left !important;
-      border-radius:0 !important;
-      height: 50px !important;
-      font-family: 'Roboto','sans-serif' !important;
-      font-style: normal !important;
-      font-weight: 500 !important;
-      font-size: 17px !important;
-      padding-left: 35px !important;
-  
+    color: rgb(5, 5, 5) !important;
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid #c1c1c1 !important;
+    text-align: left !important;
+    border-radius: 0 !important;
+    height: 50px !important;
+    font-family: "Roboto", "sans-serif" !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 17px !important;
+    padding-left: 35px !important;
   }
-  .btn-secondary:focus{
-      box-shadow:none !important;
+  .btn-secondary:focus {
+    box-shadow: none !important;
   }
-  .btn-secondary p{
-    display:inline;
+  .btn-secondary p {
+    display: inline;
+    font-weight: bold;
   }
   @media (max-width: 575px) {
-    .partOne{    
+    .partOne {
       margin-bottom: 0;
       padding-bottom: 0;
-  } 
-    .partTwo{
+    }
+    .partTwo {
       padding-top: 0px;
     }
-       .data{
-        font-size: 12px;
-        margin-bottom: 10px;
-      }
-      .title{
-        font-weight: bold;
-        font-size: 12px;
+    .data {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 12px;
     }
   }
 }
-.btn-secondary  span{
-  float:right;
+.btn-secondary span {
+  float: right;
   margin-right: 20px;
 }
-@media screen and (max-width:600px) {
-  .btn-secondary p{
-    font-size:14px
-}
-  .createdDate{
+@media screen and (max-width: 600px) {
+  .btn-secondary p {
+    font-size: 14px;
+  }
+  .createdDate {
     font-size: 11px;
   }
-
 }
-

@@ -1,0 +1,93 @@
+.schoolProfileNav {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "logo skulTitle" "logo ul";
+  grid-template-columns: 40px auto;
+  grid-template-rows: 35px 35px;
+}
+.schoolProfileNav .schoolTitle p {
+  font-family: Arial;
+  font-size: 15px !important;
+  font-weight: bold;
+  display: inline;
+}
+
+.schoolProfileNav .logo {
+  grid-area: logo;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.schoolProfileNav .logo span {
+  height: 40px;
+  background: #4f3767;
+  flex: 1;
+  border-radius: 3px;
+  margin: auto;
+}
+.schoolProfileNav .schoolTitle {
+  grid-area: skulTitle;
+  box-sizing: border-box;
+  padding: 7px 16px 0;
+}
+.schoolProfileNav .schoolTitle i {
+  margin-left: 15px;
+}
+
+.schoolProfileNav .Options ul {
+  grid-area: ul;
+  list-style: none;
+  padding: 5px 0 0 0;
+  margin: 0;
+}
+
+.schoolProfileNav .Options ul li {
+  font-family: "Roboto", "sans-serif";
+  font-style: normal;
+  display: inline;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.schoolProfileNav .Options ul li a {
+  font-size: 14px;
+  line-height: 15px;
+  color: #a3a6a9;
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+
+.schoolProfileNav .Options ul li a:hover {
+  color: #454647;
+  text-decoration: none;
+}
+.schoolProfileNav .Options ul li .router-link-exact-active {
+  color: #008ce3;
+  border-bottom: 2px solid #008ce3;
+}
+
+@media screen and (max-width: 660px) {
+  .schoolProfileNav .logo span {
+    height: 25px;
+  }
+  .schoolProfileNav .logo {
+    padding-left: 5px;
+  }
+  .schoolProfileNav .schoolTitle {
+    padding: 12px 3px 0;
+  }
+  .schoolProfileNav .schoolTitle i {
+    margin-left: 13px;
+  }
+  .schoolProfileNav p {
+    font-size: 13px;
+  }
+  .schoolProfileNav .Options ul li a {
+    font-size: 12px;
+  }
+  .schoolProfileNav .Options ul li {
+    margin-left: 4px;
+  }
+  .schoolProfileNav {
+    grid-template-columns: 30px auto;
+  }
+}

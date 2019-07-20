@@ -4,62 +4,77 @@
       <img :src="logo" alt="Logo" />&nbsp;
       <p>ShuriDash</p>
     </div>
-   <span class="sidebarToggler" @click="toggleSidebar()" :style="screenMonitor.sidebarToggler">
+    <span class="sidebarToggler" @click="toggleSidebar()" :style="screenMonitor.sidebarToggler">
       <i class="fa fa-bars"></i>
-    </span> 
+    </span>
 
-    <router-link to="/home" class="sidebarLink" @click="toggleSidebar()">
-      <div class="routeLink" :style="screenMonitor.routeLink" >
+    <router-link to="/home" class="sidebarLink" >
+      <div class="routeLink" :style="screenMonitor.routeLink" @click="toggleSidebar()" >
         <i class="fa fa-home"></i>&nbsp;
         <p :style="screenMonitor.routerName">Home</p>
       </div>
     </router-link>
     <div class="schoolItems" :style="screenMonitor.schoolItems">
-      <div class="ListTitle" @click="showSchools=!showSchools,showAllSchools=false">
-         <p class="mainTitle">Schools</p>
-      <i v-show="!showSchools" class="fa fa-caret-up"></i>
-      <i
-        v-show="showSchools"
-        class="fa fa-caret-down"
-      ></i>
+      <div class="ListTitle" v-b-toggle.collapse-4 @click="showSchools=!showSchools">
+        <p class="mainTitle">Schools
+        <span>
+            <i class="fa fa-caret-down" v-show="showSchools"></i>
+            <i class="fa fa-caret-up" v-show="!showSchools"></i>
+          </span>
+          </p>
       </div>
-     
-      <div v-show="showSchools">
-        <div class="schoolList">
-          <div class="items" v-for="(school,index) in schools" :key="index" @click="$router.push('/schoolProfile'),toggleSidebar()">
+      <b-collapse visible id="collapse-4">
+         <div class="schoolList">
+          <div
+            class="items"
+            v-for="(school,index) in schools"
+            :key="index"
+            @click="$router.push('/schoolProfile'),toggleSidebar()"
+          >
             <span :style="{background:school.logo}"></span>
             <p>{{school.name}}</p>
           </div>
         </div>
-        <div v-show="showAllSchools">
+        <p v-show="!showAllSchools" class="more" v-b-toggle.collapse-5 @click="showAllSchools=true">Show More</p>
+        <b-collapse id="collapse-5">       
+        <div>
           <p class="all" @click="$router.push('/schools'),toggleSidebar()">All Items</p>
-          <p class="more" @click="showAllSchools=false">Show Less</p>
+          <p class="more" @click="showAllSchools=false" v-b-toggle.collapse-5 >Show Less</p>
         </div>
+      </b-collapse>
 
-        <p v-show="!showAllSchools" class="more" @click="showAllSchools=true">Show More</p>
-      </div>
+      </b-collapse>
     </div>
     <div class="companyItems" :style="screenMonitor.companyItems">
-      <div class="ListTitle" @click="showCompanies=!showCompanies">
-        <p class="mainTitle">Bus Company</p>
-        <i v-show="!showCompanies" class="fa fa-caret-up" @click="showCompanies=true"></i>
-        <i v-show="showCompanies" class="fa fa-caret-down" @click="showCompanies=false"></i>
+      <div class="ListTitle" v-b-toggle.collapse-3 @click="showCompanies=!showCompanies">
+        <p class="mainTitle">
+          Bus Company
+          <span>
+            <i class="fa fa-caret-down" v-show="showCompanies"></i>
+            <i class="fa fa-caret-up" v-show="!showCompanies"></i>
+          </span>
+        </p>
       </div>
-      
-      <div v-show="showCompanies">
-        <div class="companyList" v-show="showCompanies">
-          <div class="items" v-for="(company,index) in companies" :key="index" @click="toggleSidebar()">
-            <span :style="{background:company.logo}"></span>
-            <p>{{company.name}}</p>
+      <b-collapse visible id="collapse-3">
+          <div class="companyList">
+            <div
+              class="items"
+              v-for="(company,index) in companies"
+              :key="index"
+              @click="$router.push('/companyProfile'),toggleSidebar()"
+            >
+              <span :style="{background:company.logo}"></span>
+              <p>{{company.name}}</p>
+            </div>
           </div>
-        </div>
-        <div v-show="showAllCompanies">
-          <p class="all" @click="$router.push('/companies'),toggleSidebar()">All Items</p>
-          <p class="more" @click="showAllCompanies=false">Show Less</p>
-        </div>
-
-        <p v-show="!showAllCompanies" class="more" @click="showAllCompanies=true">Show More</p>
-      </div>
+        <b-collapse id="collapse-6">
+          <div>
+            <p class="all" @click="$router.push('/companies'),toggleSidebar()">All Items</p>
+            <p class="more" v-b-toggle.collapse-6 @click="showAllCompanies=false" >Show Less</p>
+          </div>        
+        </b-collapse>
+          <p v-show="!showAllCompanies" v-b-toggle.collapse-6 class="more" @click="showAllCompanies=true">Show More</p>
+      </b-collapse>
     </div>
   </div>
 </template>
@@ -114,12 +129,12 @@ export default {
     }
   },
   methods: {
-    toggleSidebar() { 
-    if(this.screenMonitor.sidebarToggler===""){    
-      this.$store.dispatch("SideToggler");  
-    }else{
-      this.$store.dispatch("initialToggler");
-    }    
+    toggleSidebar() {
+      if (this.screenMonitor.sidebarToggler === "") {
+        this.$store.dispatch("SideToggler");
+      } else {
+        this.$store.dispatch("initialToggler");
+      }
     }
   }
 };

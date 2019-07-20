@@ -1,5 +1,3 @@
-
-
 .sidebar {
   color: white;
   position: sticky;
@@ -95,7 +93,7 @@
 }
 .ListTitle:hover {
   .mainTitle {
-    color:  #bdbdbd;
+    color: #bdbdbd;
   }
 
   i {
@@ -189,7 +187,7 @@
 .companyItems i {
   position: absolute;
   top: 7px;
-  right:20px;
+  right: 20px;
   cursor: pointer;
 }
 
@@ -198,39 +196,38 @@
   position: relative;
 }
 
+@media (max-width: 660px) {
+  .dashboardLayout {
+    height: 100vh;
+  }
+  .sidebar {
+    width: 50px;
+    text-align: center;
+    padding-top: 15px;
+    height: auto;
+  }
+  .sidebarHeader {
+    display: none;
+  }
+  .sidebarLink .routeLink p {
+    display: none;
+  }
+  .routeLink {
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .schoolItems {
+    display: none;
+  }
+  .companyItems {
+    display: none;
+  }
 
-  @media (max-width:660px) {
-    .dashboardLayout{
-      height:100vh;
-    }
-    .sidebar {
-      width:50px;
-      text-align: center;
-      padding-top: 15px;
-      height:auto;
-    }
-    .sidebarHeader{
-      display: none;
-    }
-    .sidebarLink .routeLink p{
-      display:none;
-    }
-    .routeLink{
-      margin-bottom: 0;
-      padding:0
-    }
-    .schoolItems{
-      display:none;
-    }
-    .companyItems{
-      display: none;
-    }
-    
-    .sidebar .sidebarToggler {    
-      display: block;    
-      font-size: 25px;
-      color: #ececec63;
-      cursor: pointer;
-      margin-bottom: 17px;
-    }
-    }
+  .sidebar .sidebarToggler {
+    display: block;
+    font-size: 25px;
+    color: #ececec63;
+    cursor: pointer;
+    margin-bottom: 17px;
+  }
+}

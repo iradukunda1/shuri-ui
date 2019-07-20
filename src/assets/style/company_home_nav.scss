@@ -1,0 +1,93 @@
+.companyProfileNav {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "logo skulTitle" "logo ul";
+  grid-template-columns: 40px auto;
+  grid-template-rows: 35px 35px;
+}
+.companyProfileNav .companyTitle p {
+  font-family: Arial;
+  font-size: 15px !important;
+  font-weight: bold;
+  display: inline;
+}
+
+.companyProfileNav .logo {
+  grid-area: logo;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.companyProfileNav .logo span {
+  height: 40px;
+  background: #4f3767;
+  flex: 1;
+  border-radius: 3px;
+  margin: auto;
+}
+.companyProfileNav .companyTitle {
+  grid-area: skulTitle;
+  box-sizing: border-box;
+  padding: 7px 16px 0;
+}
+.companyProfileNav .companyTitle i {
+  margin-left: 15px;
+}
+
+.companyProfileNav .Options ul {
+  grid-area: ul;
+  list-style: none;
+  padding: 5px 0 0 0;
+  margin: 0;
+}
+
+.companyProfileNav .Options ul li {
+  font-family: "Roboto", "sans-serif";
+  font-style: normal;
+  display: inline;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.companyProfileNav .Options ul li a {
+  font-size: 14px;
+  line-height: 15px;
+  color: #a3a6a9;
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+
+.companyProfileNav .Options ul li a:hover {
+  color: #454647;
+  text-decoration: none;
+}
+.companyProfileNav .Options ul li .router-link-exact-active {
+  color: #008ce3;
+  border-bottom: 2px solid #008ce3;
+}
+
+@media screen and (max-width: 660px) {
+  .companyProfileNav .logo span {
+    height: 25px;
+  }
+  .companyProfileNav .logo {
+    padding-left: 5px;
+  }
+  .companyProfileNav .companyTitle {
+    padding: 12px 3px 0;
+  }
+  .companyProfileNav .companyTitle i {
+    margin-left: 13px;
+  }
+  .companyProfileNav p {
+    font-size: 13px !important;
+  }
+  .companyProfileNav .Options ul li a {
+    font-size: 12px;
+  }
+  .companyProfileNav .Options ul li {
+    margin-left: 4px;
+  }
+  .companyProfileNav {
+    grid-template-columns: 30px auto;
+  }
+}

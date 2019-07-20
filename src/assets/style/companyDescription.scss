@@ -1,0 +1,89 @@
+.companyDetails {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35px 1fr;
+  grid-template-areas:
+    "date"
+    "infoContainer";
+}
+.companyDetails {
+  .dateField {
+    grid-area: date;
+    border: 1px solid #e0e6e8;
+    box-shadow: 0px 2px 6px 0px #797878;
+    background: white;
+    padding-top: 10px;
+    padding-left: 19px;
+  }
+  .dateField .createdDate {
+    font-family: "Roboto", "sans-serif";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    align-items: center;
+    color: #848f99;
+  }
+  .companyContainer {
+    grid-area: infoContainer;
+    padding-top: 15px;
+  }
+  .companyInfo {
+    border: 1px solid #d5dce0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 80%;
+    margin: auto;
+    background: white;
+    height: auto;
+    position: relative;
+  }
+
+  .profileInfo {
+    height: auto;
+    display: grid;
+    padding: 0px;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "partOne partTwo";
+  }
+  .title {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 13px;
+  }
+  .data {
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .btn-secondary p {
+    font-weight: bold;
+    display: inline;
+  }
+  ul {
+    word-break: break-word;
+  }
+
+  @media screen and (max-width: 600px) {
+    .btn-secondary p {
+      font-size: 13px;
+    }
+    .btn-secondary span {
+      margin-right: 0;
+    }
+    .dateField .createdDate {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .partOne {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .partTwo {
+      padding-top: 0;
+    }
+  }
+}

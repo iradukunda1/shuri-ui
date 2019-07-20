@@ -1,15 +1,15 @@
-.schools{
+.schools {
   width: 70%;
   margin: auto;
   padding-top: 45px;
   .recent {
-    font-family: 'Roboto','sans-serif';
+    font-family: "Roboto", "sans-serif";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     margin-left: 50px;
   }
-  
+
   .schoolsList {
     display: grid;
     margin-left: 45px;
@@ -22,7 +22,7 @@
       "schoolLogo createdDate .";
     cursor: pointer;
   }
-  
+
   .dot:hover {
     color: rgb(17, 17, 17);
   }
@@ -35,7 +35,7 @@
     right: 15px;
     grid-area: seeMore;
   }
-  
+
   .list:hover {
     background: #bfb9b970;
     border-radius: 4px;
@@ -63,7 +63,6 @@
     font-weight: normal;
     font-size: 11px;
     line-height: 13px;
-    color: #9CA6AF;
+    color: #9ca6af;
   }
-  
 }

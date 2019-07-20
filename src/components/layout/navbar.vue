@@ -1,29 +1,14 @@
 <template>
   <div class="navbar" :style="screenMonitor.navbar">
     <div class="routeTitle">
-        
-        <p v-if="$route.path!=='/schoolProfile'">{{$route.name}}</p>
+      <p v-if="$route.path!=='/schoolProfile' && $route.path !== '/companyProfile'">{{$route.name}}</p>
 
-      <div v-if="$route.path=='/schoolProfile'" class="schoolProfileNav">
-      <div  class="logo">
-        <span></span>
-      </div>
-        
-        <div class="schoolTitle">
-          <p>Apapec-Irebero</p>
-          <i class="fa fa-caret-down"></i>
-        </div>
-        <div class="Options">
-          <ul>
-            <li class="li1"><router-link to="/schoolProfile">Home</router-link></li>
-            <li class="li2"><router-link to="#">Students </router-link></li>
-            <li class="li3"><router-link to="#">Employees </router-link></li>
-          </ul>
-        </div>
-      </div>
+      <school_home_nav v-if="$route.path=='/schoolProfile'"></school_home_nav>
+      <company_home_nav v-if="$route.path==='/companyProfile'"></company_home_nav>
     </div>
+
     <div class="new">
-      <b-dropdown id="dropdown-right" variant="primary" class="newBtn" offset="-50" no-caret>
+      <b-dropdown id="dropdown-right" variant="primary" class="newBtn" offset="-80" no-caret>
         <template slot="button-content">
           <i class="fa fa-plus"></i>
           <span>New</span>
@@ -42,7 +27,7 @@
     <div class="profile">
       <b-dropdown
         id="dropdown-left"
-        offset="-120"
+        offset="-130"
         class="profileItem"
         variant="primary"
         no-caret
@@ -60,11 +45,19 @@
   </div>
 </template>
 <script >
+import company_home_nav from "./navbar/companyHome.vue";
+import school_home_nav from "./navbar/schoolHome.vue";
+
 export default {
   name: "navbar",
-  components: {},
+  components: {
+    company_home_nav,
+    school_home_nav
+  },
   data() {
-    return {};
+    return {
+      showAllInfo: true
+    };
   },
   created() {
     this.$store.dispatch("sidebarCycle");
@@ -84,14 +77,24 @@ export default {
   }
 };
 </script>
-<style>
-.showSidebar {
-  margin-left: 0;
+<style >
+.seeOptions #dropdown-left__BV_toggle_ {
+  color: black;
+  background: none;
+  border: none;
 }
-.showSidebarForce {
-  margin-left: 0 !important;
+.seeOptions #dropdown-left__BV_toggle_:focus {
+  box-shadow: none;
+}
+.seeOptions .dropdown-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+.dropdown-item {
+  font-size: 15px;
+  font-family: "Roboto", "sans-serif";
 }
 </style>
-<style>
+<style lang="scss">
 @import "../../assets/style/navbar.scss";
 </style>
