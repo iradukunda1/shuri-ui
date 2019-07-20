@@ -1,65 +1,59 @@
 <template>
-  <div class="schoolDetails">
+  <div class="companyDetails">
     <div class="dateField">
       <p class="createdDate">
-        Created On Feb by :
+        Created On Feb 20 by :
         <b>Shuri Dev</b>
       </p>
     </div>
-    <div class="schoolContainer">
-      <div class="schoolInfo">
+    <div class="companyContainer">
+      <div class="companyInfo">
         <b-button block v-b-toggle.collapse-1 @click="showProfileInfo=!showProfileInfo">
-          School Information
+          <p>Bus Compay Information
           <span class="profileCaret">
             <i class="fa fa-caret-down" v-show="showProfileInfo"></i>
             <i class="fa fa-caret-up" v-show="!showProfileInfo"></i>
           </span>
+          </p>
         </b-button>
-        <b-collapse visible id="collapse-1">
-          <div class="profieInfo">
+       <b-collapse visible id="collapse-1">
+        <div class="profileInfo">
             <b-row>
               <b-col sm="5" md="5">
                 <ul class="partOne">
-                  <li class="title">Description :</li>
+                  <li class="title">Description </li>
                   <li class="data">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
                     in suscipit soluta voluptate rerum ex perspiciatis iusto odit enim dolorum quo.
                   </li>
-                  <li class="title">Country :</li>
+                  <li class="title">Country </li>
                   <li class="data">Rwanda</li>
-                  <li class="title">District :</li>
+                  <li class="title">District </li>
                   <li class="data">Kicukiro</li>
                 </ul>
               </b-col>
               <b-col sm="5" offset-sm="2" md="5" offset-md="0">
                 <ul class="partTwo">
-                  <li class="title">Sector :</li>
+                  <li class="title">Sector </li>
                   <li class="data">Kimironko</li>
-                  <li class="title">Email :</li>
-                  <li class="data">ApapecIrembo@gmail.com</li>
-                  <li class="title">Phone Number :</li>
+                  <li class="title">Email </li>
+                  <li class="data">HopeBus@gmail.com</li>
+                  <li class="title">Phone Number </li>
                   <li class="data">0784141587</li>
-                  <li class="title">Geo Location :</li>
-                  <li class="data">
-                    <b>Latitude</b>: 1.234565
-                  </li>
-                  <li class="data">
-                    <b>Longitude</b>: 0.7657897
-                  </li>
                 </ul>
               </b-col>
             </b-row>
-          </div>
+        </div>
         </b-collapse>
-
-        <div class="schoolStatics">
+        <div class="compayStatics">
           <div class="profileHead">
             <b-button block v-b-toggle.collapse-2 @click="showStatsInfo=!showStatsInfo">
-              Statistics
+              <p>Statistics
               <span>
                 <i class="fa fa-caret-down" v-show="showStatsInfo"></i>
                 <i class="fa fa-caret-up" v-show="!showStatsInfo"></i>
               </span>
+              </p>
             </b-button>
           </div>
         </div>
@@ -69,7 +63,7 @@
 </template>
 <script>
 export default {
-  name: "schoolProfile",
+  name: "compayProfile",
   data() {
     return {
       showStatsInfo: true,
@@ -101,12 +95,12 @@ ul {
   box-shadow: none !important;
 }
 .btn-secondary span {
-  position: absolute;
-  right: 40px;
+  float:right;
+  margin-right:20px;
 }
 </style>
 
 <style lang="scss" scoped>
-@import "../../assets/style/schoolDescription.scss";
+@import "../../assets/style/companyDescription.scss";
 </style>
 

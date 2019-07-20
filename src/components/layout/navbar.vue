@@ -10,7 +10,10 @@
         <span class="logo"></span>
         <div class="schoolTitle">
           <p>Apapec-Irebero</p>
-          <i class="fa fa-caret-down"></i>
+          <span>
+                <i class="fa fa-caret-down" v-show="showStatsInfo"></i>
+                <i class="fa fa-caret-up" v-show="!showStatsInfo"></i>
+          </span>
         </div>
         <div class="Options">
           <ul>
@@ -21,6 +24,7 @@
         </div>
       </div>
     </div>
+    
     <div class="new">
       <b-dropdown id="dropdown-right" variant="primary" class="newBtn" offset="-50" no-caret>
         <template slot="button-content">

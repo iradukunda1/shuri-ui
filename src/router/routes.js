@@ -9,6 +9,8 @@ import createSchool from "../components/pages/createSchool.vue";
 import login from "../components/pages/login.vue";
 import notFoundPage from "../components/pages/404Page.vue";
 import schoolProfile from "../components/pages/schoolDescription.vue";
+import companyProfile from "../components/pages/companyDescription.vue";
+
 
 
 Vue.use(vueRouter);
@@ -40,6 +42,11 @@ const router = new vueRouter({
           name: "School Profile",
           path: "/schoolProfile",
           component: schoolProfile
+        },
+        {
+          name: "Company Profile",
+          path: "/companyProfile",
+          component: companyProfile
         }
       ]
     },

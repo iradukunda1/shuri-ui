@@ -1,5 +1,5 @@
 
-.schoolDetails{
+.companyDetails{
     height:auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -8,7 +8,7 @@
     "date"
     "infoContainer";
 }
-.schoolDetails {    
+.companyDetails {    
   .dateField {
     grid-area: date;
     border: 1px solid #E0E6E8;    
@@ -25,11 +25,11 @@
     align-items: center;
     color: #848f99;
   }
-  .schoolContainer {
+  .companyContainer {
     grid-area: infoContainer;
     padding-top: 15px;   
   }
-  .schoolInfo{
+  .companyInfo{
     border: 1px solid #d5dce0;
     box-sizing: border-box;
     border-radius: 2px;
@@ -44,9 +44,9 @@
   .profileInfo{
       height: auto;
       display: grid;
-      padding: 15px;
-      grid-template-rows:auto;
-      grid-template-columns:1fr 1fr;
+      padding: 0px;
+      grid-template-rows:1fr;
+      grid-template-columns:auto 1fr;
       grid-template-areas:
       "partOne partTwo"       
        
@@ -62,7 +62,37 @@
     font-size: 13px;
     margin-bottom: 15px;
   }
+  .btn-secondary p{
+      font-size: bold;
+  }
+  ul{
+      word-break: break-word;
+  }
  
 
+@media screen and (max-width:600px){
+    .btn-secondary p{
+        font-size:13px;
+        font-size: bold;
 
+        
+    }  
+    .btn-secondary span {
+        margin-right:0;
+      }
+    .dateField .createdDate {   
+        font-size: 12px;
+
+    }
+}
+@media screen and (max-width:575px){
+    .partOne {
+        padding-bottom:0;
+        margin-bottom: 0;
+    }
+    .partTwo{
+        padding-top: 0;
+
+    }
+}
 }
