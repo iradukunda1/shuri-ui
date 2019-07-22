@@ -85,7 +85,7 @@ ul {
   text-align: left !important;
   border-radius: 0 !important;
   height: 50px !important;
-  font-family: "Roboto", "sans-serif" !important;
+  font-family: "Poppins", "sans-serif" !important;
   font-style: normal !important;
   font-weight: 500 !important;
   font-size: 17px !important;

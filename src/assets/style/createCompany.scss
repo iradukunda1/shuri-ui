@@ -79,7 +79,10 @@
   }
   .phoneNumber .flag img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .phoneNumber .flag {
     width: 25px;
@@ -93,12 +96,22 @@
     border: 1px solid grey;
     border-radius: 5px;
   }
+  .phoneInput p{
+    position: absolute;
+    left: 40px;
+    height: 26px;
+    width: 54px;
+    color: #1b19b1;
+    border-radius: 5px;
+    text-align: center;
+    top: 3px;
+  }
   input[type="number"] {
     position: absolute;
     height: 30px;
     border: none;
-    width: 86%;
-    left: 39px;
+    width: calc(100% - 96px);
+    right:1px;
     top: 1px;
     height: 30px;
   }

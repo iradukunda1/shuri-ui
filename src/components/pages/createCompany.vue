@@ -19,12 +19,27 @@
         <div class="phoneNumber">
           <label for="phoneNumber">Phone Number</label>
           <div class="phoneInput">
-            <input type="number" name="phoneNumber" />
+            <p>(+{{codeNum}})</p>
+            <input type="number" name="phoneNumber" v-model="number"/>
           </div>
           <div class="flagField">
             <div class="flag">
-              <img src="flag.png" alt="flag" />
+              <b-dropdown id="dropdown-right" variant="primary" class="newBtn" no-caret offset="-50">
+              <template slot="button-content">
+                 <img :src="flagNum" alt="" />
+              </template>
+              <b-dropdown-item @click="codeNum='250'">
+                <i class="fa fa-flag"></i>  Rwanda
+              </b-dropdown-item>
+              <b-dropdown-item @click="codeNum='243'">
+                <i class="fa fa-flag-checkered"></i>  Congo
+              </b-dropdown-item>
+              <b-dropdown-item @click="codeNum='230'">
+                <i class="fa fa-flag-o"></i>  Uganda
+              </b-dropdown-item>
+            </b-dropdown>
             </div>
+            
           </div>
         </div>
         <div class="country">
@@ -55,10 +70,28 @@
 export default {
   name: "createCompany",
   props: [],
-  computed: {}
+  computed: {},
+  data(){
+    return{
+      flagNum:"flag.png",
+      codeNum:"250"
+    }
+  }
 };
 </script>
+<style>
+#dropdown-right__BV_toggle_{
+  background: none;
+  height: 25px;
+  width:25px;
+  border:none;
+}
+#dropdown-right__BV_toggle_:focus{
+ box-shadow:none;
+}
+</style>
 
 <style lang="scss" scoped>
-@import "../../assets/style/createCompany.scss"
+@import "../../assets/style/createCompany.scss";
+
 </style>

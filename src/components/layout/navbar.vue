@@ -92,7 +92,7 @@ export default {
 }
 .dropdown-item {
   font-size: 15px;
-  font-family: "Roboto", "sans-serif";
+  font-family: "Poppins", "sans-serif";
 }
 </style>
 <style lang="scss">
