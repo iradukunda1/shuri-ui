@@ -20,7 +20,7 @@
           <label for="phoneNumber">Phone Number</label>
           <div class="phoneInput">
             <p>(+{{codeNum}})</p>
-            <input type="number" name="phoneNumber" v-model="number"/>
+            <input type="number" name="phoneNumber"/>
           </div>
           <div class="flagField">
             <div class="flag">
