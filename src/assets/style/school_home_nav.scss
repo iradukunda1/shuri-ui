@@ -42,7 +42,7 @@
 }
 
 .schoolProfileNav .Options ul li {
-  font-family: "Roboto", "sans-serif";
+  font-family: "Poppins", "sans-serif";
   font-style: normal;
   display: inline;
   margin-left: 15px;
@@ -53,16 +53,23 @@
   line-height: 15px;
   color: #a3a6a9;
   font-weight: 500;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
-
+.schoolProfileNav .Options ul li:hover{
+  color: #008ce3;
+}
 .schoolProfileNav .Options ul li a:hover {
-  color: #454647;
+  color: #008ce3;
   text-decoration: none;
 }
 .schoolProfileNav .Options ul li .router-link-exact-active {
   color: #008ce3;
   border-bottom: 2px solid #008ce3;
+}
+.btn-secondary{
+width: 0;
+padding: 10px;
+height: 33px
 }
 
 @media screen and (max-width: 660px) {
@@ -90,4 +97,5 @@
   .schoolProfileNav {
     grid-template-columns: 30px auto;
   }
+
 }

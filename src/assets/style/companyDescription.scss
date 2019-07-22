@@ -1,11 +1,14 @@
 .companyDetails {
-  height: auto;
+  height: calc(100vh - 70px);
+  overflow: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 35px 1fr;
   grid-template-areas:
     "date"
     "infoContainer";
+  background: #bdbaba4a
+    
 }
 .companyDetails {
   .dateField {
@@ -15,9 +18,12 @@
     background: white;
     padding-top: 10px;
     padding-left: 19px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
   .dateField .createdDate {
-    font-family: "Roboto", "sans-serif";
+    font-family: "Poppins", "sans-serif";
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -50,7 +56,7 @@
   .title {
     font-family: sans-serif;
     font-style: normal;
-    font-weight: 800;
+    font-weight: bold;
     font-size: 13px;
   }
   .data {
@@ -61,20 +67,25 @@
   .btn-secondary p {
     font-weight: bold;
     display: inline;
+    font-family: 'Poppins', sans-serif;
   }
   ul {
     word-break: break-word;
   }
 
-  @media screen and (max-width: 600px) {
-    .btn-secondary p {
-      font-size: 13px;
-    }
+@media screen and (max-width:660px){
+    .btn-secondary p{
+        font-size:13px;
+        margin-left: -20px;        
+    }  
     .btn-secondary span {
-      margin-right: 0;
+      margin-right: 7px;
     }
     .dateField .createdDate {
       font-size: 12px;
+    }
+    .btn-secondary span{
+      font-size:13px
     }
   }
   @media screen and (max-width: 575px) {

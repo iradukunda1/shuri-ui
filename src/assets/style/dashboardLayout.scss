@@ -10,12 +10,14 @@ body {
 .dashboardLayout {
   display: grid;
   width: 100vw;
+  height: 100vh;
   padding: 0;
   grid-template-rows: 70px calc(100vh - 70px);
   grid-template-columns: auto 1fr;
   grid-template-areas:
     "sidebar navbar"
     "sidebar content";
+  overflow-x: hidden;
 }
 .navbar {
   background-color: white;
@@ -28,8 +30,16 @@ body {
   overflow: auto;
   width: 239px;
   transition: all 1s !important;
+  overflow: auto;
 }
 .dashboardContent {
   background-color: white;
   grid-area: content;
+  overflow: auto;
+}
+@media screen and (max-width:800px){
+.dashboardLayout {
+  grid-template-columns: auto calc(100vw - 44px);
+
+}
 }

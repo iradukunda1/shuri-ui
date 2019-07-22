@@ -5,7 +5,7 @@
     </div>
 
     <div class="list" v-for="(recent,index) in recents" :key="index">
-      <div class="companiesList">
+      <div class="companiesList" @click="$router.push('/companyProfile')">
         <span :style="{background:recent.logo}" class="companyLogo"></span>
         <p class="companyName">{{recent.name}}</p>
         <span class="createdDate">Created: {{recent.createdDate}}</span>

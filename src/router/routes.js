@@ -66,9 +66,14 @@ const router = new vueRouter({
       component: login
     },
     {
+      name:"Page not Found",
       path: "*",
       component: notFoundPage
     }
   ]
 });
+router.afterEach((to) => {
+  document.title = "shuriDash | "+to.name
+})
 export default router;
+

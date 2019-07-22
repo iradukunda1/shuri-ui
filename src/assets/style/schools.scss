@@ -3,7 +3,7 @@
   margin: auto;
   padding-top: 45px;
   .recent {
-    font-family: "Roboto", "sans-serif";
+    font-family: "Poppins", "sans-serif";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -48,7 +48,7 @@
   }
   .schoolName {
     grid-area: schoolName;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -58,11 +58,66 @@
   }
   .createdDate {
     grid-area: createdDate;
-    font-family: "Roboto", "sans-serif";
+    font-family: "Poppins", "sans-serif";
     font-style: normal;
     font-weight: normal;
     font-size: 11px;
     line-height: 13px;
-    color: #9ca6af;
+    color: #9CA6AF;
+  }}
+  @media screen and (max-width:1024px){
+  .schools{
+    width: 80%;
+    margin: auto;
+    padding-top: 45px;
+  }   
+ }
+
+ @media screen and (max-width:425px){
+  .schools{
+    width: 70%;
+    margin: auto;
+    padding-top: 45px; 
   }
-}
+  .schoolsList{
+      margin-left: 5px !important;
+    }
+    .recent {
+      font-weight: 600;
+      font-size: 14px;
+      margin-left: 5px !important;  
+    }
+ }
+ @media screen and (max-width:375px){
+  .schools{
+    width: 85%;
+    margin: auto;
+    padding-top: 45px;
+  }
+    .recent {
+      font-weight: 600;
+      font-size: 15px;
+      margin-left: 5px !important;
+    }
+    .schoolsList{
+      margin-left: 5px !important;
+    }
+    
+ }
+ @media screen and (max-width:320px){
+  .schools{
+    width: 90%;
+    margin: auto;
+    padding-top: 45px;
+  }
+    .recent {
+      font-weight: 600;
+      font-size: 15px;
+      margin-left: 5px !important;
+    }
+    .schoolsList{
+      margin-left: 5px !important;
+    }
+  
+  }
+

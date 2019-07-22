@@ -77,7 +77,6 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 @import "../../assets/style/schoolDescription.scss";
 </style>

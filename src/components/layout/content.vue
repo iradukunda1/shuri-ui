@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboardContent" :style="sidebarTriggered.dashboardContent">
+  <div class="dashboardContent">
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>

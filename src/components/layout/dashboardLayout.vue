@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboardLayout" :style="layout.layoutStyle">
+    <div class="dashboardLayout">
       <navbar/>
       <sidebar/>
       <dashboardContent/>

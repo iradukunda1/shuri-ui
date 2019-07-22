@@ -1,7 +1,7 @@
 <template>
-  <div class="navbar" :style="screenMonitor.navbar">
+  <div class="navbar">
     <div class="routeTitle">
-      <p v-if="$route.path!=='/schoolProfile' && $route.path !== '/companyProfile'">{{$route.name}}</p>
+      <p v-if="$route.path!=='/schoolProfile' && $route.path !== '/companyProfile'" class="name">{{$route.name}}</p>
 
       <school_home_nav v-if="$route.path=='/schoolProfile'"></school_home_nav>
       <company_home_nav v-if="$route.path==='/companyProfile'"></company_home_nav>
@@ -35,7 +35,7 @@
       >
         <template slot="button-content">My</template>
         <b-dropdown-item>
-          <b>shuri jean</b>
+          <b>Shuri Dash</b>
         </b-dropdown-item>
         <b-dropdown-divider></b-dropdown-divider>
         <b-dropdown-item>My Profile Setting</b-dropdown-item>
@@ -60,7 +60,7 @@ export default {
     };
   },
   created() {
-    this.$store.dispatch("sidebarCycle");
+    this.$store.dispatch("screenCycle");
   },
   computed: {
     screenMonitor: {

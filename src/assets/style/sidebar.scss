@@ -1,17 +1,19 @@
 .sidebar {
   color: white;
-  position: sticky;
-  top: 0;
+  display: grid;
+  grid-template-areas: "normal mobile";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  position: relative;
+  height: 100vh;
+  
 }
-.sidebar .sidebarToggler {
-  display: none;
+.normal {
+  grid-area: normal;
+  
 }
-
-.sidebar .sidebarToggler .fa-caret-left {
-  font-size: 15px;
-  position: absolute;
-  top: 13px;
-  left: -8px;
+.mobile{
+  display:none
 }
 .sidebar .sidebarToggler:hover {
   color: #bdbdbd;
@@ -35,6 +37,16 @@
   line-height: 23px;
   display: inline;
 }
+
+.sidebar .sidebarToggler {
+  font-size: 25px;
+  color: #ececec63;
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  top:15px;
+  z-index: 2;
+}
 .routeLink {
   color: white;
   background: #c7c7c745;
@@ -55,6 +67,53 @@
 .sidebarLink {
   text-decoration: none;
   color: white;
+}
+.sidebarLink_mobile {
+  width: 100%;
+  text-align: center;
+  color: white;
+  grid-area: sidebarLink_mobile
+}
+.sidebarLink_mobile_home {
+  width:100%;
+  margin-bottom: 33px;
+}
+.home_icon{
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  font-size: 25px;
+  background: #c7c7c745;
+ 
+}
+.sidebarLink_mobile_company {
+  width:100%;
+  margin-top: 33px;
+}
+.company_icon{
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  font-size: 23px;
+  background: #c7c7c745;
+ 
+}
+.sidebarLink_mobile_school{
+  width:100%;
+  margin-bottom: 8px;
+}
+.school_icon{
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  font-size: 23px;
+  background: #c7c7c745;
+}
+
+.sidebarLink_mobile_home:hover {
+  text-decoration: none;
+  background: #9c979738;
+
 }
 .sidebarLink:hover {
   text-decoration: none;
@@ -135,7 +194,7 @@
   top: 10px;
 }
 .companyItems .items p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -156,7 +215,7 @@
 }
 .schoolItems .items p {
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -170,7 +229,7 @@
 .companyItems .all,
 .schoolItems .all {
   margin-top: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -195,39 +254,27 @@
 .companyItems {
   position: relative;
 }
-
-@media (max-width: 660px) {
-  .dashboardLayout {
-    height: 100vh;
-  }
-  .sidebar {
-    width: 50px;
-    text-align: center;
-    padding-top: 15px;
-    height: auto;
-  }
-  .sidebarHeader {
-    display: none;
-  }
-  .sidebarLink .routeLink p {
-    display: none;
-  }
-  .routeLink {
-    margin-bottom: 0;
-    padding: 0;
-  }
-  .schoolItems {
-    display: none;
-  }
-  .companyItems {
-    display: none;
-  }
-
-  .sidebar .sidebarToggler {
-    display: block;
-    font-size: 25px;
-    color: #ececec63;
-    cursor: pointer;
-    margin-bottom: 17px;
-  }
+.mobile {
+  border-left: 1px solid rgba(211, 211, 211, 0.49);
+  grid-area: mobile;
+  position: relative;
+  width:50px;
+  display: none;
+  grid-template-areas: 
+  "."
+  "sidebarLink_mobile"
+  ;
+  grid-template-columns:1fr;
+  grid-template-rows:70px 1fr;
 }
+@media (max-width: 865px) {
+  
+  .sidebar {
+    margin-left: -195px;
+  }
+  .mobile {
+    display:grid
+  }
+  
+}
+

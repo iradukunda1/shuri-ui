@@ -10,14 +10,9 @@
         id="dropdown-left"
         class="seeOptions"
         :show="true"
-        no-caret
         offset="-50"
-        @click="showAllInfo = !showAllInfo,gg()"
-      >
-        <template slot="button-content">
-          <i class="fa fa-caret-down" v-show="showAllInfo"></i>
-          <i class="fa fa-caret-up" v-show="!showAllInfo"></i>
-        </template>
+        @click="showAllInfo = !showAllInfo"      >
+       
         <b-dropdown-item>
           <i class="fa fa-pencil"></i> School Details
         </b-dropdown-item>

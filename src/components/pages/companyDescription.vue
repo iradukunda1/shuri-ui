@@ -9,7 +9,7 @@
     <div class="companyContainer">
       <div class="companyInfo">
         <b-button block v-b-toggle.collapse-1 @click="showProfileInfo=!showProfileInfo">
-          <p>Bus Compay Information</p>
+          <p>Bus Company Information</p>
           <span class="profileCaret">
             <i class="fa fa-caret-down" v-show="showProfileInfo"></i>
             <i class="fa fa-caret-up" v-show="!showProfileInfo"></i>
